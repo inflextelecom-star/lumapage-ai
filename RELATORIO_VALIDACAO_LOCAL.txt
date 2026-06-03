@@ -1,0 +1,13 @@
+README_ATUALIZACAO_ENTERPRISE.txt | 48 linhas | 1664 bytes
+README_MASTER_FINAL.txt | 57 linhas | 2112 bytes
+README_PRONTO_PARA_VENDA.txt | 34 linhas | 1144 bytes
+README_SUBIR_ATUALIZACAO_FINAL.txt | 30 linhas | 1010 bytes
+_headers | 5 linhas | 175 bytes
+_redirects | 1 linhas | 19 bytes
+database/migration_upgrade.sql | 101 linhas | 3650 bytes
+database/schema.sql | 138 linhas | 4398 bytes
+docs/ARQUIVOS_INCLUIDOS.txt | 11 linhas | 280 bytes
+functions/api/[[path]].js | 73 linhas | 18524 bytes
+index.html | 11 linhas | 30196 bytes
+
+Validação local: arquivos gerados, JS verificado com node --check, schema SQL incluso. Teste real depende do deploy Cloudflare + D1 + secrets.

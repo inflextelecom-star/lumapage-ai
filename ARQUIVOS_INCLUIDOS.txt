@@ -1,0 +1,11 @@
+./README_ATUALIZACAO_ENTERPRISE.txt
+./README_MASTER_FINAL.txt
+./README_PRONTO_PARA_VENDA.txt
+./README_SUBIR_ATUALIZACAO_FINAL.txt
+./_headers
+./_redirects
+./database/migration_upgrade.sql
+./database/schema.sql
+./docs/ARQUIVOS_INCLUIDOS.txt
+./functions/api/[[path]].js
+./index.html
