@@ -1,25 +1,25 @@
-LumaPage AI - Sistema completo consolidado
+LumaPage AI - Estrutura correta para Cloudflare Pages
 
-Arquivos obrigatórios para subir no GitHub:
+ARQUIVOS QUE DEVEM FICAR NA RAIZ DO GITHUB:
 - index.html
+- _worker.js
 - _redirects
-- functions/api/[[path]].js
+- _headers
 - database/schema.sql
 
-Cloudflare:
-1. Pages conectado ao GitHub.
-2. D1 binding configurado com Variable name: DB.
-3. Rode database/schema.sql no Console D1 se ainda não criou tabelas.
-4. Configure Variables/Secrets:
-   - ADMIN_PASSWORD = sua senha admin
-   - JWT_SECRET = uma chave grande aleatória
-   - GEMINI_API_KEY = chave Gemini
-   - MERCADO_PAGO_ACCESS_TOKEN = token Mercado Pago
-   - RESEND_API_KEY = opcional para envio real de e-mail
-   - PUBLIC_BASE_URL = https://lumapage-ai.pages.dev
+IMPORTANTE:
+- NÃO use worker.js. O arquivo correto é _worker.js.
+- NÃO deixe [[path]].js solto na raiz.
+- Para testar API: https://lumapage-ai.pages.dev/api/health
 
-Teste:
-- /api/health deve retornar JSON ok:true
-- cadastro deve salvar no D1
-- login deve entrar
-- admin: Varejaoeverton@gmail.com + ADMIN_PASSWORD
+Cloudflare:
+1. D1 binding em Production: DB -> lumapage-db
+2. Variables/Secrets:
+   ADMIN_PASSWORD = sua senha admin
+   JWT_SECRET = qualquer texto grande e secreto
+   PUBLIC_BASE_URL = https://lumapage-ai.pages.dev
+   GEMINI_API_KEY = sua chave Gemini (opcional)
+   MERCADO_PAGO_ACCESS_TOKEN = token Mercado Pago (opcional)
+   RESEND_API_KEY = chave e-mail (opcional)
+
+Depois do commit no GitHub, aguarde deploy automático.
